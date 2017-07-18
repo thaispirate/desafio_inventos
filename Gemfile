@@ -22,9 +22,9 @@ gem 'temple', '~>0.8.0'
 gem 'slim', '~>3.0.8'
 gem 'slim-rails' , '~>3.1.2'
 gem 'devise'
-gem 'rails-admin'
 gem 'formtastic', '~> 3.0'
 gem 'bootstrap-sass', '~> 3.3.6'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
