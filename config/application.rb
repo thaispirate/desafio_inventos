@@ -15,5 +15,7 @@ module Myapp
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     config.assets.initialize_on_precompile = false
+    config.generators.template_engine = :slim
+
   end
 end

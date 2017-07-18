@@ -20,7 +20,6 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'temple', '~>0.8.0'
 gem 'slim', '~>3.0.8'
-gem 'slim-rails' , '~>3.1.2'
 gem 'devise'
 gem 'formtastic', '~> 3.0'
 gem 'bootstrap-sass', '~> 3.3.6'
