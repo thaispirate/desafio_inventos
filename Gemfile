@@ -24,6 +24,7 @@ gem 'slim-rails' , '~>3.1.2'
 gem 'devise'
 gem 'formtastic', '~> 3.0'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem "slack-notifier"
 
 gem 'pg', :group => :production
 
