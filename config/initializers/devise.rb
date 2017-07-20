@@ -12,10 +12,30 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'thais.potc@gmail.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
+
+  Rails.application.routes.default_url_options[:host] = 'https://mysterious-eyrie-68015.herokuapp.com/'
+
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.default :charset => "utf-8"
+
+
+  config.action_mailer.smtp_settings = {
+  address: “smtp.gmail.com”,
+  port: 587,
+  domain: "gmail.com",
+  authentication: “plain”,
+  enable_starttls_auto: true,
+  user_name: "thais.potc@gmail.com",
+  password: "ta151092"
+  }
 
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = 'ActionMailer::Base'
