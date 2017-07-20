@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get  '/contact', to: 'static_pages#contact'
   get  '/signup',  to: 'users#new'
 
-  resources :projects
+  resources :projects do
+    resources :bugs
+  end
   root 'projects#index'
 
   devise_for :users
