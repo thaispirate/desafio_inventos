@@ -18,6 +18,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+#Needed for desafio_inventos
 gem 'temple', '~>0.8.0'
 gem 'slim', '~>3.0.8'
 gem 'devise'
@@ -25,7 +27,6 @@ gem 'formtastic', '~> 3.0'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'jquery-rails'
 gem 'slack-notifier'
-
 gem 'pg', :group => :production
 
 # Use CoffeeScript for .coffee assets and views
