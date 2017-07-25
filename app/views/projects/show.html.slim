@@ -1,0 +1,66 @@
+p id="notice"
+|
+= notice
+
+p
+  <b>Name: </b>
+  = @project.name
+p
+  <b>User: </b>
+  = @project.user.email
+
+p
+  <b>Title: </b>
+  = @project.title
+
+p
+  <b>Content: </b>
+  = @project.content
+
+=' link_to 'Edit', edit_project_path(@project) ,class: "btn btn-default"
+'|
+= link_to 'Back', projects_path, class: "btn btn-default"
+
+h2 Bugs
+- @project.bugs.each do |bug|
+  p
+    <b>Bug: </b>
+    = bug.name
+
+  p
+    <b>Content: </b>
+    = bug.body
+
+  <p>
+    <b>Status: </b>
+    = bug.status
+
+  <p>
+  =' link_to 'Edit',edit_project_bug_path(@project,bug), class: "btn btn-sm btn-default"
+  '|
+  = link_to 'Destroy Bug', [bug.project, bug], method: :delete, data: { confirm: 'Are you sure?' },class: "btn btn-sm btn-default"
+
+
+h2 Add a bug:
+= form_for([@project, @project.bugs.build]) do |f|
+    div class="field"
+      = f.label :Name
+      br
+      = f.text_field :name
+
+    div class="field"
+      = f.label :Content
+      br
+      = f.text_area :body
+
+    div class="field"
+      = f.label :Status
+      br
+      = f.text_field :status
+
+    div class="actions"
+      = f.submit
+
+
+
+<br>

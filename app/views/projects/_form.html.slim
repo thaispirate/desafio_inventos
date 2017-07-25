@@ -1,0 +1,29 @@
+= form_for(@project) do |f|
+    - if @project.errors.any?
+      div id="errorExplanation"
+        h2
+        |
+        = pluralize(@project.errors.count, "error")
+        prohibited this post from being saved:
+        ul
+          - @project.errors.full_messages.each do |msg|
+            li = msg
+
+
+    div class="field"
+      = f.label :name
+      br
+      = f.text_field :name
+
+    div class="field"
+      = f.label :title
+      br
+      = f.text_field :title
+
+    div class="field"
+      = f.label :content
+      br
+      = f.text_area :content
+
+    div class="actions"
+      = f.submit

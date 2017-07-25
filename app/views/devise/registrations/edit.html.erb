@@ -4,6 +4,18 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true%>
+  </div>
+
+  <div class="field"><%= f.radio_button :is_female, true %> <%= f.label :is_female, "Female" %> </div>
+  <div><%= f.radio_button :is_female, false %> <%= f.label :is_female, "Male" %> </div>
+
+  <div class="field"><%= f.label :date_of_birth %><br />
+      <%= f.date_select :date_of_birth, { start_year: 100.years.ago.year} %>
+  </div> <br />
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
